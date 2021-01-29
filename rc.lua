@@ -1,5 +1,5 @@
 -- My awesome config file
--- Last modified: fre jan 29, 2021  04:04
+-- Last modified: fre jan 29, 2021  04:32
 -- Sign: JN
 -- Notes:
 --     mkdir ~/.config/awesome
@@ -296,7 +296,7 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
+    awful.key({ modkey, "Shift"   }, "m", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
@@ -412,23 +412,18 @@ clientkeys = gears.table.join(
             c:raise()
         end ,
         {description = "(un)maximize", group = "client"}),
-    awful.key({ modkey, "Control" }, "m",
+    awful.key({ modkey,           }, "Down", -- Add my vertical toggle
         function (c)
             c.maximized_vertical = not c.maximized_vertical
             c:raise()
-        end ,
-        {description = "(un)maximize vertically", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "m",
-        function (c)
-            c.maximized_horizontal = not c.maximized_horizontal
-            c:raise()
-        end ,
-        {description = "(un)maximize horizontally", group = "client"}),
-    awful.key({ modkey,  }, "Down", -- Add my vertical toggle
-        function (c)
-            c.maximized_vertical = not c.maximized_vertical
         end ,
         {description = "(un)maximize vertically", group = "client"})
+    -- awful.key({ modkey, "Shift"   }, "m",
+    --     function (c)
+    --         c.maximized_horizontal = not c.maximized_horizontal
+    --         c:raise()
+    --     end ,
+    --     {description = "(un)maximize horizontally", group = "client"}),
 )
 
 -- Bind all key numbers to tags.
