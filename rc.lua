@@ -1,5 +1,5 @@
 -- My awesome config file
--- Last modified: fre jan 29, 2021  01:07
+-- Last modified: fre jan 29, 2021  02:41
 -- Sign: JN
 -- Notes:
 --     mkdir ~/.config/awesome
@@ -157,7 +157,7 @@ myassault = assault({
    charging_color = "#00ff00"
 })
 
--- Countdown https://awesomewm.org/recipes/countdown
+-- Countdown https://github.com/lcpz/lain/pull/249
 -- local countdown = {
 --     widget   = wibox.widget.textbox(),
 --     checkbox = wibox.widget {
@@ -173,7 +173,7 @@ myassault = assault({
 -- function countdown.set()
 --     awful.prompt.run {
 --         prompt       = "Countdown minutes: ", -- floats accepted
---         textbox      = awful.screen.focused().mypromptbox.widget,
+--         textbox      = awful.screen.focused().mypromptbox.widget, -- Error: "attempt to index a nil value (field 'myprmomptbox'). Note that (a) mypromptbox variable is defined below!
 --         exe_callback = function(timeout)
 --             countdown.seconds = tonumber(timeout)
 --             if not countdown.seconds then return end
@@ -201,7 +201,7 @@ myassault = assault({
 --         end
 --     }
 -- end
--- 
+--
 -- countdown.checkbox:buttons(awful.util.table.join(
 --     awful.button({}, 1, function() countdown.set() end), -- left click
 --     awful.button({}, 3, function() -- right click
@@ -213,6 +213,7 @@ myassault = assault({
 --         end
 --     end)
 -- ))
+-- end countdown
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -264,6 +265,8 @@ mytasklist.buttons = awful.util.table.join(
                                               if client.focus then client.focus:raise() end
                                           end))
 
+
+
 for s = 1, screen.count() do
     -- Create a promptbox for each screen
     mypromptbox[s] = awful.widget.prompt()
@@ -298,7 +301,8 @@ for s = 1, screen.count() do
     right_layout:add(APW) -- http://awesome.naquadah.org/wiki/Volume_control_for_PulseAudio
     right_layout:add(myassault) -- Battery indicator
     right_layout:add(mytextclock) -- Text clock
-    -- right_layout:add(countdown) -- Countdown. Error: "argument not a widget"
+    -- right_layout:add(countdown.widget) -- Countdown
+    -- right_layout:add(countdown.checkbox) -- Countdown
     right_layout:add(mylayoutbox[s]) -- awesome layout selector
 
     -- Now bring it all together (with the tasklist in the middle)
@@ -564,5 +568,4 @@ end
 run_once("nm-applet")
 run_once("blueman-applet")
 --- }}}
-
 
