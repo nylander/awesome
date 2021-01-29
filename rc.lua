@@ -1,5 +1,5 @@
 -- My awesome config file
--- Last modified: fre jan 29, 2021  04:32
+-- Last modified: fre jan 29, 2021  04:48
 -- Sign: JN
 -- Notes:
 --     mkdir ~/.config/awesome
@@ -148,7 +148,7 @@ myassault = assault({
    critical_color = "#ff0000",
    charging_color = "#00ff00"
 })
--- 
+
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
