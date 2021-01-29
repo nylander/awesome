@@ -1,0 +1,14 @@
+#!/bin/bash
+
+## termx
+##
+## Pops up gnome-terminal with random (predefined!) profile 
+##
+## Usage: termx
+##
+
+profiles=("BlackOnWhite" "BlackOnYellow" "SolarizedLight" "SolarizedDark" "Gold" "Green" "Pink" "Red" "YellowOnBlue")
+profile=${profiles[ $RANDOM % ${#profiles[@]} ]}
+
+gnome-terminal --window-with-profile=${profile} &
+
