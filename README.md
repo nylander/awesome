@@ -1,6 +1,6 @@
 # Settings for the awesome windows manager
 
-- Last modified: fre jan 29, 2021  12:38
+- Last modified: fre jan 29, 2021  01:23
 - Sign: JN
 
 ## Description
@@ -27,15 +27,8 @@ Some notes about my settings of the  [awesome window manager](https://awesomewm.
 
 ## Files
 
-1. `rc.lua` - The main user resource file
-Place in `~/.config/awesome/`
-
-2. `theme.lua` - System theme file
-Place in `/usr/share/awesome/themes/default/`
-
-3. `bin/termx` - Launcher of `gnome-terminal` with random profiles # ADD MORE DESCRIPTION HERE
-Place in `~/bin/`
-
-4. `wallpapers/` - Folder with Desktop backround images
-Place in `~/.config/awesome/`
+- `rc.lua` - The main user resource file. Put in `~/.config/awesome/`
+- `theme.lua` - System theme file. Put in `/usr/share/awesome/themes/default/`
+- `bin/termx` - Launcher of `gnome-terminal` with random profiles. Put in `~/bin/`  # ADD MORE DESCRIPTION HERE
+- `wallpapers/` - Folder with Desktop backround images. Put in `~/.config/awesome/`
 
