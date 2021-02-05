@@ -1,5 +1,5 @@
 -- My awesome config file
--- Last modified: fre jan 29, 2021  04:48
+-- Last modified: fre feb 05, 2021  03:03
 -- Sign: JN
 -- Notes:
 --     mkdir ~/.config/awesome
@@ -615,3 +615,18 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- {{{ network manager applet -- JN
+-- Start nm-applet only if it's not already running (https://awesome.naquadah.org/wiki/Autostart) -- JN
+function run_once(cmd)
+  findme = cmd
+  firstspace = cmd:find(" ")
+  if firstspace then
+    findme = cmd:sub(0, firstspace-1)
+  end
+  awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
+end
+run_once("nm-applet")
+run_once("blueman-applet")
+--- }}}
+
