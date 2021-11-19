@@ -1,5 +1,5 @@
 -- My awesome config file
--- Last modified: fre feb 05, 2021  03:03
+-- Last modified: fre nov 19, 2021  01:05
 -- Sign: JN
 -- Notes:
 --     mkdir ~/.config/awesome
@@ -319,9 +319,11 @@ globalkeys = gears.table.join(
         end,
         {description = "go back", group = "client"}),
 
-    -- Standard program
+    -- Standard programs
     awful.key({ modkey,           }, "Return", function () awful.spawn("termx") end,
               {description = "open a random terminal", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn("cool-retro-term --fullscreen") end,
+              {description = "open cool-retro-term", group = "launcher"}),
     awful.key({ modkey,           }, "x", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "w", function () awful.spawn("chromium-browser") end,

@@ -1,6 +1,6 @@
 # Settings for the awesome windows manager
 
-- Last modified: fre jan 29, 2021  01:23
+- Last modified: fre nov 19, 2021  01:07
 - Sign: JN
 
 ## Description
@@ -23,7 +23,7 @@ Some notes about my settings of the  [awesome window manager](https://awesomewm.
 
 #### For additional packages
 
-    sudo apt install vim-gnome chromium-browser blueman network-manager-gnome
+    sudo apt install vim-gnome chromium-browser blueman network-manager-gnome cool-retro-term
 
 ## Files
 
