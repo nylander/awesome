@@ -1,1 +1,6 @@
-Old/
+Old/*
+private/*
+*.swp
+TODO
+awesome-wm-widgets/*
+net_widgets/*

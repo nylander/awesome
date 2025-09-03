@@ -1,6 +1,6 @@
 # Settings for the awesome windows manager
 
-- Last modified: tis feb 06, 2024  10:37
+- Last modified: ons sep 03, 2025  06:07
 - Sign: JN
 
 ## Description
@@ -17,8 +17,8 @@ Try instead to [install from source](https://github.com/awesomeWM/awesome#debian
     # Old deb from apt sources would have been: `sudo apt install awesome awesome-extra`
     # Build your own deb from source:
 
-    $ sudo apt build-dep awesome
     $ sudo apt install libxcb-xfixes0-dev
+    $ sudo apt build-dep awesome
     $ git clone https://github.com/awesomewm/awesome
     $ cd awesome
     $ make package
@@ -34,20 +34,8 @@ Local configuration:
     $ cd ~/.config
     $ git clone https://github.com/nylander/awesome.git
     $ cd ~/.config/awesome
-    $ git clone https://github.com/mokasin/apw.git
-    $ git clone https://github.com/copycat-killer/awesome-freedesktop.git freedesktop
 
-    # Note the freedesktop clone is not configured. Need to make sure I've cloned the correct branch (for 3.5.X)
     # ADD MORE DESCRIPTION HERE
-
-    $ wget https://raw.githubusercontent.com/NuckChorris/assault/master/awesomewm/assault.lua
-
-    # Note, assault.lua (Battery indicator) may need some local configuration
-    # ADD MORE DESCRIPTION HERE
-
-#### For additional packages
-
-    $ sudo apt install vim-gnome chromium-browser blueman network-manager-gnome cool-retro-term
 
 ## Files
 
@@ -55,4 +43,4 @@ Local configuration:
 - `theme.lua` - System theme file. Put in `/usr/share/awesome/themes/default/`
 - `bin/termx` - Launcher of `gnome-terminal` with random profiles. Put in `~/bin/`  # ADD MORE DESCRIPTION HERE
 - `wallpapers/` - Folder with Desktop backround images. Put in `~/.config/awesome/`
-- `~/.xsession-errors` - Error messages fro debugging.
+- `~/.xsession-errors` - Error messages for debugging.
