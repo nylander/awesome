@@ -1,6 +1,6 @@
 # Settings for the awesome windows manager
 
-- Last modified: ons sep 03, 2025  06:07
+- Last modified: ons sep 03, 2025  06:13
 - Sign: JN
 
 ## Description
@@ -17,7 +17,7 @@ Try instead to [install from source](https://github.com/awesomeWM/awesome#debian
     # Old deb from apt sources would have been: `sudo apt install awesome awesome-extra`
     # Build your own deb from source:
 
-    $ sudo apt install libxcb-xfixes0-dev
+    $ sudo apt install -y libxcb-xfixes0-dev feh
     $ sudo apt build-dep awesome
     $ git clone https://github.com/awesomewm/awesome
     $ cd awesome
@@ -34,6 +34,8 @@ Local configuration:
     $ cd ~/.config
     $ git clone https://github.com/nylander/awesome.git
     $ cd ~/.config/awesome
+    $ git clone https://github.com/streetturtle/awesome-wm-widgets.git
+    $ git clone https://github.com/pltanton/net_widgets.git
 
     # ADD MORE DESCRIPTION HERE
 

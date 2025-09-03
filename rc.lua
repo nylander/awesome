@@ -1,5 +1,5 @@
 -- My awesome config file
--- Last modified: ons sep 03, 2025  06:09
+-- Last modified: ons sep 03, 2025  06:13
 -- Sign: JN
 -- Notes:
 -- awesome was installed from source following instructions on
@@ -17,7 +17,7 @@
 --   $ mkdir -p ~/.config/awesome && cd ~/.config/awesome
 --   $ cp ~/src/awesome/awesomerc.lua rc.lua
 --   $ cp /usr/local/share/awesome/themes/default/theme.lua .
---   $ git clone https://https://github.com/streetturtle/awesome-wm-widgets.git
+--   $ git clone https://github.com/streetturtle/awesome-wm-widgets.git
 --   $ git clone https://github.com/pltanton/net_widgets.git
 --
 -- [X] Change wallpaper to ~/.config/awesome/wallpapers/Baertling-Oradalki.jpg.
