@@ -1,5 +1,5 @@
 -- My awesome config file
--- Last modified: tor sep 04, 2025  10:22
+-- Last modified: fre sep 05, 2025  11:18
 -- Sign: JN
 -- Notes:
 -- awesome was installed from source following instructions on
@@ -167,7 +167,6 @@ end)
 -- }}}
 
 -- {{{ Wibar
-
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
@@ -242,13 +241,13 @@ screen.connect_signal("request::desktop_decoration", function(s)
            { -- Left widgets
                layout = wibox.layout.fixed.horizontal,
                mylauncher,
-               -- s.mytaglist,
+               s.mytaglist,
                s.mypromptbox,
            },
            s.mytasklist, -- Middle widget
            { -- Right widgets
                layout = wibox.layout.fixed.horizontal,
-               s.mytaglist,
+               -- s.mytaglist,
                -- JN: Add wifi widget
                net_wireless,
                -- mykeyboardlayout,
