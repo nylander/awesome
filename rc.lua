@@ -1,5 +1,5 @@
 -- My awesome config file
--- Last modified: fre sep 05, 2025  11:18
+-- Last modified: 2025-10-31 10:08:33
 -- Sign: JN
 -- Notes:
 -- awesome was installed from source following instructions on
@@ -289,6 +289,8 @@ awful.keyboard.append_global_keybindings({
     {description = "open a random xterm", group = "launcher"}),
     awful.key({ modkey,           }, "x", function () awful.spawn(terminal) end,
     {description = "open a terminal", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "x", function () awful.spawn("teaching-terminal") end,
+    {description = "open a teaching terminal", group = "launcher"}),
     awful.key({ modkey,           }, "w", function () awful.spawn(webbrowser) end,
     {description = "open web browser", group = "launcher"}),
     awful.key({ modkey,           }, "v", function () awful.spawn(editor) end,
