@@ -1,6 +1,6 @@
 # Settings for the awesome windows manager
 
-- Last modified: tor sep 04, 2025  10:27
+- Last modified: 2025-12-12 10:34:40
 - Sign: JN
 
 ## Description
@@ -11,7 +11,7 @@ Some notes about my settings of the [awesome window manager](https://awesomewm.o
 
 Tested on Ubuntu 22.04.3 LTS.
 
-Note Feb 2024: The deb package provided by Ubuntu 22.04 is old and I recently had issues.
+Note Dec 2025: The deb package provided by Ubuntu 22.04 is old and I recently had issues.
 Try instead to [install from source](https://github.com/awesomeWM/awesome#debian-based).
 
     # Old deb from apt sources would have been: `sudo apt install awesome awesome-extra`
@@ -22,8 +22,9 @@ Try instead to [install from source](https://github.com/awesomeWM/awesome#debian
     $ git clone https://github.com/awesomewm/awesome
     $ cd awesome
     $ make package
-    $ cd build
-    $ sudo apt install ./*.deb
+    $ cp build/awesome-*.deb /tmp
+    $ cd /tmp
+    $ sudo apt install ./awesome-*.deb
 
 Also, make sure there is a file `/usr/share/xsessions/awesome.desktop`:
 
@@ -53,7 +54,10 @@ Commands:
 ## Files
 
 - `rc.lua` - The main user resource file. Put in `~/.config/awesome/`
-- `theme.lua` - System theme file. Put in `/usr/share/awesome/themes/default/`
+- `theme.lua` - System theme file. Put in `/usr/local/share/awesome/themes/default/`
 - `bin/termx` - Launcher of `gnome-terminal` with random profiles. Put in `~/bin/`.
 - `wallpapers/` - Folder with Desktop backround images. Put in `~/.config/awesome/`
+
+## Debugging
+
 - `~/.xsession-errors` - Error messages for debugging.
