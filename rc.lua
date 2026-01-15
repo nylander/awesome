@@ -1,5 +1,5 @@
 -- My awesome config file
--- Last modified: 2025-10-31 10:08:33
+-- Last modified: 2026-01-15 13:46:03
 -- Sign: JN
 -- Notes:
 -- awesome was installed from source following instructions on
@@ -118,6 +118,7 @@ mymainmenu = awful.menu({ items = {
     { "Bluetooth", "blueman-applet", "/usr/share/icons/hicolor/32x32/apps/blueman.png"},
     { "Network", "nm-applet", "/usr/share/icons/HighContrast/22x22/apps/preferences-system-network.png" },
     { "Volume", "pavucontrol", "/usr/share/icons/HighContrast/22x22/status/audio-volume-high.png"},
+    { "Printer", "system-config-printer", "/usr/share/icons/HighContrast/22x22/devices/printer.png"},
     { "open terminal", terminal }
 }})
 
